@@ -8,7 +8,12 @@ def encoder(x):
 
 
 def decoder(x):
-    ##
+    password = ""
+    for char in x:
+        digit = int(char) + 10
+        digit = (digit - 3) % 10
+        password += str(digit)
+    return password
 
 
 def main():
